@@ -8,9 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		4B3D5AAE293114E20097D4AF /* Crypto_App_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3D5AAD293114E20097D4AF /* Crypto_App_iOSApp.swift */; };
-		4B3D5AB0293114E20097D4AF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3D5AAF293114E20097D4AF /* ContentView.swift */; };
+		4B3D5AB0293114E20097D4AF /* IntroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4B3D5AAF293114E20097D4AF /* IntroView.swift */; };
 		4B3D5AB2293114E40097D4AF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B3D5AB1293114E40097D4AF /* Assets.xcassets */; };
 		4B3D5AB5293114E40097D4AF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4B3D5AB4293114E40097D4AF /* Preview Assets.xcassets */; };
+		98A8CAD529390D64001FEF49 /* IntroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A8CAD429390D64001FEF49 /* IntroViewModel.swift */; };
+		98A8CADB29391536001FEF49 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 98A8CADD29391536001FEF49 /* Localizable.strings */; };
+		98A8CAE52939192D001FEF49 /* ControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A8CAE42939192D001FEF49 /* ControlsView.swift */; };
 		98AE46592937C157000551AB /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AE46582937C157000551AB /* Colors.swift */; };
 		98AE465B2937C165000551AB /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98AE465A2937C165000551AB /* Images.swift */; };
 /* End PBXBuildFile section */
@@ -18,9 +21,12 @@
 /* Begin PBXFileReference section */
 		4B3D5AAA293114E20097D4AF /* Crypto_App_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crypto_App_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4B3D5AAD293114E20097D4AF /* Crypto_App_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypto_App_iOSApp.swift; sourceTree = "<group>"; };
-		4B3D5AAF293114E20097D4AF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4B3D5AAF293114E20097D4AF /* IntroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroView.swift; sourceTree = "<group>"; };
 		4B3D5AB1293114E40097D4AF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4B3D5AB4293114E40097D4AF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		98A8CAD429390D64001FEF49 /* IntroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewModel.swift; sourceTree = "<group>"; };
+		98A8CADC29391536001FEF49 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		98A8CAE42939192D001FEF49 /* ControlsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControlsView.swift; sourceTree = "<group>"; };
 		98AE46582937C157000551AB /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		98AE465A2937C165000551AB /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -57,6 +63,7 @@
 			children = (
 				98AE46532937C06F000551AB /* App */,
 				98AE46542937C080000551AB /* Flows */,
+				98A8CADF29391842001FEF49 /* Controls */,
 				98AE46552937C08C000551AB /* Resources */,
 				4B3D5AB3293114E40097D4AF /* Preview Content */,
 			);
@@ -69,6 +76,14 @@
 				4B3D5AB4293114E40097D4AF /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		98A8CADF29391842001FEF49 /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				98A8CAE42939192D001FEF49 /* ControlsView.swift */,
+			);
+			path = Controls;
 			sourceTree = "<group>";
 		};
 		98AE46532937C06F000551AB /* App */ = {
@@ -93,6 +108,7 @@
 				4B3D5AB1293114E40097D4AF /* Assets.xcassets */,
 				98AE46582937C157000551AB /* Colors.swift */,
 				98AE465A2937C165000551AB /* Images.swift */,
+				98A8CADD29391536001FEF49 /* Localizable.strings */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -108,7 +124,8 @@
 		98AE46572937C0DA000551AB /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				4B3D5AAF293114E20097D4AF /* ContentView.swift */,
+				4B3D5AAF293114E20097D4AF /* IntroView.swift */,
+				98A8CAD429390D64001FEF49 /* IntroViewModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -172,6 +189,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B3D5AB5293114E40097D4AF /* Preview Assets.xcassets in Resources */,
+				98A8CADB29391536001FEF49 /* Localizable.strings in Resources */,
 				4B3D5AB2293114E40097D4AF /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -183,20 +201,34 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4B3D5AB0293114E20097D4AF /* ContentView.swift in Sources */,
+				4B3D5AB0293114E20097D4AF /* IntroView.swift in Sources */,
 				98AE465B2937C165000551AB /* Images.swift in Sources */,
+				98A8CAD529390D64001FEF49 /* IntroViewModel.swift in Sources */,
 				98AE46592937C157000551AB /* Colors.swift in Sources */,
+				98A8CAE52939192D001FEF49 /* ControlsView.swift in Sources */,
 				4B3D5AAE293114E20097D4AF /* Crypto_App_iOSApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		98A8CADD29391536001FEF49 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				98A8CADC29391536001FEF49 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
 		4B3D5AB6293114E40097D4AF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -257,6 +289,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -323,6 +356,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -352,6 +386,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
