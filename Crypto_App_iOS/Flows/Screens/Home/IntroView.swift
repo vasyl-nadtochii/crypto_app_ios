@@ -25,9 +25,8 @@ struct IntroView: View {
             }
             Spacer()
             
-            VStack {
-                ControlsView()
-            }
+                ButtonView()
+            
             .padding(.bottom, 30)
             .opacity(viewModel.showingBottomTitle ? 1.0 : 0.0)
             .onAppear() {

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ControlsView: View {
+struct ButtonView: View {
     var body: some View {
         
         Button(action: {}, label: {
@@ -17,7 +17,7 @@ struct ControlsView: View {
                 .frame(width: UIScreen.main.bounds.width - 120)
                 .padding()
         })
-        .background(Color.mainToolBarColor)
+        .background(Color.monochrom)
         .cornerRadius(10)
     }
 }
@@ -25,6 +25,7 @@ struct ControlsView: View {
 
 struct ControlsView_Previews: PreviewProvider {
     static var previews: some View {
-        ControlsView()
+        ButtonView()
+            .previewLayout(.sizeThatFits)
     }
 }
