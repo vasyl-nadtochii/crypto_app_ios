@@ -1,0 +1,13 @@
+/* 
+  Localizable.strings
+  Crypto_App_iOS
+
+  Created by Zhenya Pavlovskyi on 01.12.2022.
+  
+*/
+
+// Mark: IntroView
+
+"welcome" = "Welcome";
+"to_the_crypto" = "To the Crypto";
+"let's_start" = "Let's start!";
