@@ -16,17 +16,15 @@ struct HomeView: View {
             ZStack {
                 VStack {
                     Form {
-                        bitcoinSection
-                        litecoinSection
-                        ethereumSection
-                        bitcoinSection
-                        litecoinSection
-                        ethereumSection
+                        ForEach(sectionCoin) { item in
+                            SectionCoinView(imageName: item.imageName, nameCoin: item.nameCoin, priceCoin: item.priceCoin)
+                        }
                     }
                     .scrollContentBackground(.hidden)
                     .foregroundColor(Color.cultured)
                     
                     buttonSettings
+                    Spacer()
                 }
                 .toolbar {
                     ToolbarItem(placement: .principal) {
@@ -64,45 +62,45 @@ private extension HomeView {
         }
     }
     
-    var bitcoinSection: some View {
-        Section {
-            VStack {
-                createSection(imageName: Image.bitcoin, nameCoin: "Bitcoin", priceCoin: "$21,188.12")
-            }
-        }
-        .listRowBackground(Color.noire)
-        .frame(height: 40)
-    }
+//    var bitcoinSection: some View {
+//        Section {
+//            VStack {
+//                createSection(imageName: Image.bitcoin, nameCoin: "Bitcoin", priceCoin: "$21,188.12")
+//            }
+//        }
+//        .listRowBackground(Color.noire)
+//        .frame(height: 40)
+//    }
     
-    var litecoinSection: some View {
-        Section {
-            VStack {
-                createSection(imageName: Image.litecoin, nameCoin: "Litecoin", priceCoin: "$68.06")
-            }
-        }
-        .listRowBackground(Color.noire)
-        .frame(height: 40)
-    }
+//    var litecoinSection: some View {
+//        Section {
+//            VStack {
+//                createSection(imageName: Image.litecoin, nameCoin: "Litecoin", priceCoin: "$68.06")
+//            }
+//        }
+//        .listRowBackground(Color.noire)
+//        .frame(height: 40)
+//    }
     
-    var ethereumSection: some View {
-        Section {
-            VStack {
-                createSection(imageName: Image.ether, nameCoin: "Ethereum", priceCoin: "$1,651.64")
-            }
-        }
-        .listRowBackground(Color.noire)
-        .frame(height: 40)
-    }
+//    var ethereumSection: some View {
+//        Section {
+//            VStack {
+//                createSection(imageName: Image.ether, nameCoin: "Ethereum", priceCoin: "$1,651.64")
+//            }
+//        }
+//        .listRowBackground(Color.noire)
+//        .frame(height: 40)
+//    }
     
     var buttonSettings: some View {
         Button(action: {}, label: {
             Image.settingsButton
-            
         })
         .frame(width: 75, height: 75)
         .background(Color.monochrom)
         .cornerRadius(15)
         .offset(x:140, y: 0)
+        
     }
     
     var toolBarCrypto: some View {
