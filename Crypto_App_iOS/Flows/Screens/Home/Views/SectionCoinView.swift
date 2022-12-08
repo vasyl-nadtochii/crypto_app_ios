@@ -39,7 +39,8 @@ struct SectionCoinView: View {
 
 struct SectionCoinView_Previews: PreviewProvider {
     static var previews: some View {
-        SectionCoinView(imageName: Image.bitcoin, nameCoin: "Bitcoin", priceCoin: "$21,188.12")
-            .previewLayout(.sizeThatFits)
+        ZStack {
+            SectionCoinView(imageName: Image.bitcoin, nameCoin: "Bitcoin", priceCoin: "$21,188.12")
+        } .background(Color.gray)
     }
 }

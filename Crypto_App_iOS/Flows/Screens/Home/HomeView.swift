@@ -16,7 +16,7 @@ struct HomeView: View {
             ZStack {
                 VStack {
                     Form {
-                        ForEach(sectionCoin) { item in
+                        List(viewModel.sectionCoin) { item in
                             SectionCoinView(imageName: item.imageName, nameCoin: item.nameCoin, priceCoin: item.priceCoin)
                         }
                     }
@@ -51,7 +51,7 @@ private extension HomeView {
                     Spacer()
                     
                     Text("\(priceCoin)")
-                        .padding(.all, 5)
+                        .padding(.all, 10)
                         .clipped()
                         .background(Color.carbon)
                         .cornerRadius(10)
@@ -61,36 +61,6 @@ private extension HomeView {
             }
         }
     }
-    
-//    var bitcoinSection: some View {
-//        Section {
-//            VStack {
-//                createSection(imageName: Image.bitcoin, nameCoin: "Bitcoin", priceCoin: "$21,188.12")
-//            }
-//        }
-//        .listRowBackground(Color.noire)
-//        .frame(height: 40)
-//    }
-    
-//    var litecoinSection: some View {
-//        Section {
-//            VStack {
-//                createSection(imageName: Image.litecoin, nameCoin: "Litecoin", priceCoin: "$68.06")
-//            }
-//        }
-//        .listRowBackground(Color.noire)
-//        .frame(height: 40)
-//    }
-    
-//    var ethereumSection: some View {
-//        Section {
-//            VStack {
-//                createSection(imageName: Image.ether, nameCoin: "Ethereum", priceCoin: "$1,651.64")
-//            }
-//        }
-//        .listRowBackground(Color.noire)
-//        .frame(height: 40)
-//    }
     
     var buttonSettings: some View {
         Button(action: {}, label: {

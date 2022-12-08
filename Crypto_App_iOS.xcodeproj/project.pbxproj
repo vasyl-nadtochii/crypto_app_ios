@@ -142,12 +142,20 @@
 		98E79FC2293F95E100BADD29 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				98E79FD62940F94F00BADD29 /* Views */,
 				98E79FC3293F95F200BADD29 /* HomeView.swift */,
 				98E79FC5293F960300BADD29 /* HomeViewModel.swift */,
-				98E79FCB293FDFB200BADD29 /* Data.swift */,
-				98E79FD32940017E00BADD29 /* SectionCoinView.swift */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		98E79FD62940F94F00BADD29 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				98E79FD32940017E00BADD29 /* SectionCoinView.swift */,
+				98E79FCB293FDFB200BADD29 /* Data.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

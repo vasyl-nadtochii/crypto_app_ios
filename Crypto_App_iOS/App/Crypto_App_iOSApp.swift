@@ -11,7 +11,8 @@ import SwiftUI
 struct Crypto_App_iOSApp: App {
     var body: some Scene {
         WindowGroup {
-            IntroView(viewModel: .init())
+            HomeView(viewModel: .init())
+          //  IntroView(viewModel: .init())
         }
     }
 }
