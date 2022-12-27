@@ -7,24 +7,25 @@
 
 import SwiftUI
 
-struct GraphComponentView: View {
-    @ObservedObject var viewModel: GraphComponentModel
+struct GraphView: View {
+    
+    @ObservedObject var viewModel: GraphViewModel
     
     var body: some View {
         ZStack {
             VStack(alignment: .center, spacing: 10) {
                 HStack(alignment: .bottom, spacing: 26) {
-                    ForEach(Array(viewModel.coinInfo.enumerated()), id: \.offset) { index, value in
+                    ForEach(viewModel.priceInfoViewModels) { priceInfoViewModel in
                         Rectangle()
-                            .foregroundColor(viewModel.getColor(index: index))
-                            .frame(width: 35, height: (Double(viewModel.fullBarHeight) / viewModel.maxValue) * value.price )
+                            .foregroundColor(priceInfoViewModel.color)
+                            .frame(width: 35, height: (Double(viewModel.fullBarHeight) / viewModel.maxValue) * priceInfoViewModel.price)
                             .cornerRadius(.infinity)
                     }
                 }
-                customeColorDivider1
+                divider
                 
                 HStack(spacing: 9) {
-                    ForEach(viewModel.coinInfo) { val in
+                    ForEach(viewModel.priceInfoViewModels) { val in
                         Text(val.day)
                     }
                     .frame(width: 50, height: 30)
@@ -41,8 +42,8 @@ struct GraphComponentView: View {
     }
 }
 
-private extension GraphComponentView {
-    var customeColorDivider1: some View {
+private extension GraphView {
+    var divider: some View {
         Color.gray
             .cornerRadius(.infinity)
             .frame(height: 5)
@@ -51,7 +52,16 @@ private extension GraphComponentView {
 }
 
 struct GraphComponentView_Previews: PreviewProvider {
+    
+   static let coinInfo: [PriceInfo] = [
+        PriceInfo(price: 90.4, day: "01.11"),
+        PriceInfo(price: 81.0, day: "02.11"),
+        PriceInfo(price: 96.4, day: "03.11"),
+        PriceInfo(price: 66.4, day: "04.11"),
+        PriceInfo(price: 96.4, day: "05.11")
+    ]
+    
     static var previews: some View {
-        GraphComponentView(viewModel: .init())
+        GraphView(viewModel: .init(coinInfo: coinInfo))
     }
 }
